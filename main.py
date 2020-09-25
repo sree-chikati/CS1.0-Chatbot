@@ -3,4 +3,9 @@
 from random import choice
 
 def get_bot_response(user_response) :
-    mood_happy = ['eat chips!']
+    sweets = ['Ice Cream', 'Chocolate', 'Cake']
+    salty = ['Chips', 'Popcorn', 'Cheese & Crackers']
+    fruits = ['Bananas', 'Strawberries', 'Grapes']
+    drinks = ['Water', 'Tea', 'Coffe']
+    quick_meals = ['Mac & Cheese', 'Ramen', 'Salad']
+    soups = ['Tomato Soup', 'Chicken Noodle Soup', 'Brocolli Cheddar Soup']
