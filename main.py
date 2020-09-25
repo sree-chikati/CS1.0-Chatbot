@@ -2,35 +2,44 @@
 #get a random selection of responses
 from random import choice
 
+print("Welcome to the Mood Market Bot Assistant!")
+print("Here are your options of food types today:")
+print("sweet food")
+print("salty food")
+print("healthy food")
+print("beverage")
+print("warm meal")
+print("hot soup")
+
 def get_bot_response(user_response) :
     sweets = ['Ice Cream', 'Chocolate', 'Cake']
     salty = ['Chips', 'Popcorn', 'Cheese & Crackers']
     fruits = ['Bananas', 'Strawberries', 'Grapes']
     drinks = ['Water', 'Tea', 'Hot Chocolate']
-    quick_meals = ['Mac & Cheese', 'Ramen', 'Salad']
+    quick_meals = ['Mac & Cheese', 'Ramen', 'Grilled Cheese']
     soups = ['Tomato Soup', 'Chicken Noodle Soup', 'Brocolli Cheddar Soup']
 
     if user_response == "sweet food":
-        return choice(sweets)
+        return f'You should have: {choice(sweets)}'
     elif user_response == "salty food":
-        return choice(salty)
+        return f'You should have: {choice(salty)}'
     elif user_response == "healthy food":
-        return choice(fruits)
+        return f'You should have: {choice(fruits)}'
     elif user_response == "beverage":
-        return choice(drinks)
-    elif user_response == "meals":
-        return choice(quick_meals)
-    elif user_response == "soup":
-        return choice(soups)
+        return f'You should have: {choice(drinks)}'
+    elif user_response == "warm food":
+        return f'You should have: {choice(quick_meals)}'
+    elif user_response == "hot soup":
+        return f'You should have: {choice(soups)}'
     else:
-        return "That's not an option we offer. Please try option or type 'done' to quit."
+        print('Please enter one of the options listed above or enter "done" to exit')
     
 
-print("Welcome to the Mood Market Bot Assistant!")
-user_response = ''
+user_response =''
 while True:
-    user_response = input("Which type of food are you in the mood for today?")
+    user_response = input("Please choose the food your mood is craving: ")
     if user_response == 'done':
         break
-    response = get_bot_response(user_response)
-    print(response)
+    
+    bot_response = get_bot_response(user_response)
+    print(bot_response)
