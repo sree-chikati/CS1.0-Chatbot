@@ -27,3 +27,10 @@ def get_bot_response(user_response) :
     
 
 print("Welcome to the Mood Market Bot Assistant!")
+user_response = ''
+while True:
+    user_response = input("Which type of food are you in the mood for today?")
+    if user_response == 'done':
+        break
+    response = get_bot_response(user_response)
+    print(response)
