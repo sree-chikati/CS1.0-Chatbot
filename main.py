@@ -2,8 +2,7 @@
 #get a random selection of responses
 from random import choice
 
-print("Welcome to the Mood Market Bot Assistant!")
-print("Here are your options of food types today:")
+print("Welcome to the Mood Market Bot Assistant! Here are your options of food types today:")
 print("sweet food")
 print("salty food")
 print("healthy food")
@@ -12,6 +11,7 @@ print("warm meal")
 print("hot soup")
 
 def get_bot_response(user_response) :
+
     sweets = ['Ice Cream', 'Chocolate', 'Cake']
     salty = ['Chips', 'Popcorn', 'Cheese & Crackers']
     fruits = ['Bananas', 'Strawberries', 'Grapes']
@@ -27,12 +27,12 @@ def get_bot_response(user_response) :
         return f'You should have: {choice(fruits)}'
     elif user_response == "beverage":
         return f'You should have: {choice(drinks)}'
-    elif user_response == "warm food":
+    elif user_response == "warm meal":
         return f'You should have: {choice(quick_meals)}'
     elif user_response == "hot soup":
         return f'You should have: {choice(soups)}'
     else:
-        print('Please enter one of the options listed above or enter "done" to exit')
+        return ('Please enter one of the options listed above or enter "done" to exit')
     
 
 user_response =''
@@ -41,5 +41,4 @@ while True:
     if user_response == 'done':
         break
     
-    bot_response = get_bot_response(user_response)
-    print(bot_response)
+    print(get_bot_response(user_response))
